@@ -42,6 +42,10 @@
 
 通过 Schoenfeld 残差检验发现，`InternetService_Fiber optic`、`OnlineBackup_Yes` 与 `TechSupport_Yes` 三个变量的 p 值小于 0.05，提示它们随时间变化的效应可能不满足完全的比例风险假设，因此在解释这些变量的长期风险关系时需谨慎。
 
+![Schoenfeld 残差检验_internet](/assets/images/Schosenfeld_internet.png)
+![Schoenfeld 残差检验_online](/assets/images/Schosenfeld_online.png)
+![Schoenfeld 残差检验_tech](/assets/images/Schosenfeld_tech.png)
+
 ### 5.4 加速失效时间 (AFT) 模型
 
 作为半参数模型的补充，本代码拟合了 Log-Logistic AFT 模型。为全面考察变量影响，模型纳入了以下解释变量（均进行独热编码）：  
