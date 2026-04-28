@@ -1,9 +1,5 @@
 # TheFifthConstant.github.io
----
-layout: post
-title: "生存分析报告"
-date: 2026-04-28
----
+
 
 ## 生存分析（任务 2.1 和 2.2）
 
