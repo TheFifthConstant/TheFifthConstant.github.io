@@ -18,7 +18,9 @@ date: 2026-04-28
 ### 5.2 Kaplan-Meier 分析
 
 - **总体生存曲线**：绘制所有目标客户的 Kaplan-Meier 曲线，中位生存时间约 34 个月，即一半客户预计在 34 个月内流失。
+![总体生存曲线](/assets/images/Kaplan_curve_all.png)
 - **分组比较**：按 `InternetService` 分组绘制生存曲线。Fiber optic 用户的生存曲线明显低于 DSL 用户，表明光纤用户流失风险更高。
+![InternetService 存曲线](/assets/images/Kaplan_curve_internet.png)
 - **Log-rank 检验**：对 `InternetService` 进行两两比较，p 值 < 0.001，差异具有统计学显著性。
 
 ### 5.3 Cox 比例风险模型
@@ -32,6 +34,7 @@ date: 2026-04-28
 | `OnlineBackup_Yes` | -0.79 | 0.46 | <0.005 |
 | `TechSupport_Yes` | -0.64 | 0.53 | <0.005 |
 | `PaperlessBilling_Yes` | 0.15 | 1.16 | 0.02 |
+![Cox风险系数](/assets/images/Cox_model_hazard_ratios.png)
 
 - 拥有受抚养人（`Dependents_Yes`）的客户流失风险显著降低（HR = 0.73）。
 - 订购光纤互联网（`InternetService_Fiber optic`）的客户流失风险略高（HR = 1.22）。
@@ -67,6 +70,9 @@ date: 2026-04-28
 3. 按月度折现率折现后，得到各月净现值（NPV）和累计 NPV。
 
 生成的结果包含 **累计 NPV 柱状图**（12/24/36 个月）与 **该队列的生存概率曲线**，直观展示客户随时间流失对价值的影响。
+
+![累计 NPV 柱状图](/assets/images/Cumulative_NPV.png)
+![该队列的生存概率曲线](/assets/images/Survival_probability.png)
 
 通过对比不同特征组合的累计 NPV，可量化留存策略（如推广增值服务）的长期经济收益，为精准营销和预算分配提供数据支持。
 
